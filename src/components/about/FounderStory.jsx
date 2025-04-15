@@ -31,15 +31,13 @@ const FounderStory = () => {
 
         <AnimatedSection
           animation="fade-in"
-          className="md:w-1/2 order-1 md:order-2"
+          className="md:w-1/2 order-1 md:order-2 flex justify-center items-center" // Added flex centering
         >
-          <div className="md:w-1/2 flex justify-center items-center mb-8 md:mb-0">
-            <img
-              src={founderImg} // Use imported image
-              alt="Founder Name"
-              className="rounded-lg shadow-lg max-w-xs md:max-w-sm"
-            />
-          </div>
+          <img
+            src={founderImg} // Use imported image
+            alt="Founder Name"
+            className="rounded-lg shadow-lg max-w-xs md:max-w-sm w-full" // Added w-full for better scaling within flex container
+          />
         </AnimatedSection>
       </div>
     </section>

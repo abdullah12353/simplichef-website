@@ -31,7 +31,7 @@ const BlogPostPage = () => {
 
   if (loading) {
     return (
-      <div className="pt-24 pb-16 text-center">
+      <div className="pt-32 pb-16 text-center">
         <Container>Loading post...</Container>
       </div>
     );
@@ -39,7 +39,7 @@ const BlogPostPage = () => {
 
   if (!post) {
     return (
-      <div className="pt-24 pb-16 text-center">
+      <div className="pt-32 pb-16 text-center">
         <Container>
           <h1 className="text-3xl font-bold mb-4">Post Not Found</h1>
           <p className="mb-6">
@@ -64,7 +64,7 @@ const BlogPostPage = () => {
   });
 
   return (
-    <div className="pt-24 pb-16">
+    <div className="pt-32 pb-16">
       <Container className="max-w-4xl mx-auto">
         <article>
           {/* Post Header */}

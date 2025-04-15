@@ -7,13 +7,13 @@ import WaitlistForm from "../components/home/WaitlistForm";
 
 const HomePage = () => {
   return (
-    <>
+    <div className="pt-32 pb-16"> {/* Added wrapper and increased top padding */}
       <Hero />
       <Benefits />
       <SkillJourney />
       <Testimonials />
       <WaitlistForm />
-    </>
+    </div>
   );
 };
 
