@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/simplichef-website/static/css/main.c62c4d3b.css",
-    "main.js": "/simplichef-website/static/js/main.beeafdc0.js",
-    "index.html": "/simplichef-website/index.html",
-    "main.c62c4d3b.css.map": "/simplichef-website/static/css/main.c62c4d3b.css.map",
-    "main.beeafdc0.js.map": "/simplichef-website/static/js/main.beeafdc0.js.map"
+    "main.css": "/static/css/main.c62c4d3b.css",
+    "main.js": "/static/js/main.beeafdc0.js",
+    "index.html": "/index.html",
+    "main.c62c4d3b.css.map": "/static/css/main.c62c4d3b.css.map",
+    "main.beeafdc0.js.map": "/static/js/main.beeafdc0.js.map"
   },
   "entrypoints": [
     "static/css/main.c62c4d3b.css",
