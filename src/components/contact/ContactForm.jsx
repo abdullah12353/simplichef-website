@@ -92,7 +92,7 @@ const ContactForm = () => {
                     <div>
                       <div className="font-medium">Email</div>
                       <a
-                        href="mailto:hello@simplichef.com"
+                        href="mailto:moabdi9367@gmail.com"
                         className="text-primary-500 hover:underline"
                       >
                         hello@simplichef.com
@@ -123,7 +123,7 @@ const ContactForm = () => {
                     <div>
                       <div className="font-medium">Location</div>
                       <div className="text-gray-600">
-                        San Francisco, CA, USA
+                        Coventry, United Kingdom
                       </div>
                     </div>
                   </div>

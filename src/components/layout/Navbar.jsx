@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Button from "../ui/Button";
+import logoSrc from '../../assets/images/logo.png'; // Import the image
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -38,7 +39,7 @@ const Navbar = () => {
       <div className="container-custom flex items-center justify-between">
         <Link to="/" className="flex items-center">
           <img
-            src="/assets/images/logo.png"
+            src={logoSrc} // Use the imported variable here
             alt="SimpliChef Logo"
             className="h-10 md:h-12"
           />

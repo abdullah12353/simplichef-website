@@ -2,35 +2,38 @@ import React, { useState } from "react";
 import Container from "../layout/Container";
 import Card from "../ui/Card";
 import AnimatedSection from "../ui/AnimatedSection";
+import testimonial1 from '../../assets/images/testimonial-1.jpg'; // Import image 1
+import testimonial2 from '../../assets/images/testimonial-2.jpg'; // Import image 2
+import testimonial3 from '../../assets/images/testimonial-3.jpg'; // Import image 3
+
+const testimonialsData = [
+  {
+    id: 1,
+    name: "Sarah L.",
+    title: "Busy Mom",
+    quote:
+      "SimpliChef has been a lifesaver! I used to stress about dinner every night, but now I can whip up healthy meals my family loves in under 30 minutes.",
+    image: testimonial1, // Use imported image 1
+  },
+  {
+    id: 2,
+    name: "Michael C.",
+    title: "College Student",
+    quote:
+      "I barely knew how to boil water before SimpliChef. Now I'm impressing my roommates with delicious, budget-friendly meals. It's surprisingly easy!",
+    image: testimonial2, // Use imported image 2
+  },
+  {
+    id: 3,
+    name: "Jessica R.",
+    title: "Young Professional",
+    quote:
+      "After long work days, the last thing I wanted was a complicated recipe. SimpliChef's simple instructions and quick meals are perfect for my lifestyle.",
+    image: testimonial3, // Use imported image 3
+  },
+];
 
 const Testimonials = () => {
-  const testimonials = [
-    {
-      id: 1,
-      name: "Alex Johnson",
-      role: "College Student",
-      image: "/assets/images/testimonial-1.jpg",
-      quote:
-        "SimpliChef helped me stop wasting money on takeout. I've saved over $200 a month and actually enjoy cooking now!",
-    },
-    {
-      id: 2,
-      name: "Sarah Williams",
-      role: "Young Professional",
-      image: "/assets/images/testimonial-2.jpg",
-      quote:
-        "I went from burning pasta to confidently hosting dinner parties. The step-by-step approach made all the difference.",
-    },
-    {
-      id: 3,
-      name: "Michael Chen",
-      role: "Graduate Student",
-      image: "/assets/images/testimonial-3.jpg",
-      quote:
-        "The app's structured learning path is perfect. I'm eating healthier, spending less, and actually having fun in the kitchen.",
-    },
-  ];
-
   const [activeTestimonial, setActiveTestimonial] = useState(0);
 
   return (
@@ -53,25 +56,25 @@ const Testimonials = () => {
             >
               <div className="mb-6">
                 <img
-                  src={testimonials[activeTestimonial].image}
-                  alt={testimonials[activeTestimonial].name}
+                  src={testimonialsData[activeTestimonial].image}
+                  alt={testimonialsData[activeTestimonial].name}
                   className="w-20 h-20 rounded-full mx-auto object-cover"
                 />
               </div>
               <blockquote className="text-xl italic text-gray-700 mb-6">
-                "{testimonials[activeTestimonial].quote}"
+                "{testimonialsData[activeTestimonial].quote}"
               </blockquote>
               <div className="font-semibold text-lg">
-                {testimonials[activeTestimonial].name}
+                {testimonialsData[activeTestimonial].name}
               </div>
               <div className="text-gray-500">
-                {testimonials[activeTestimonial].role}
+                {testimonialsData[activeTestimonial].title}
               </div>
             </Card>
           </AnimatedSection>
 
           <div className="flex justify-center mt-8 space-x-2">
-            {testimonials.map((_, index) => (
+            {testimonialsData.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setActiveTestimonial(index)}

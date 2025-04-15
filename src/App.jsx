@@ -6,6 +6,7 @@ import HomePage from "./pages/HomePage";
 import BlogPage from "./pages/BlogPage";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
+import BlogPostPage from "./pages/BlogPostPage"; // <-- Import new page
 
 function App() {
   return (
@@ -14,7 +15,10 @@ function App() {
       <main className="flex-grow">
         <Routes>
           <Route path="/" element={<HomePage />} />
+          {/* Keep the main blog page route */}
           <Route path="/blog" element={<BlogPage />} />
+          {/* Add the dynamic route for individual posts */}
+          <Route path="/blog/:slug" element={<BlogPostPage />} /> {/* <-- Add this route */}
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
