@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="md:col-span-1">
             <Link to="/" className="flex items-center mb-4">
               <img
-                src="/assets/images/logo.png"
+                src={require("../../assets/images/logo.png")}
                 alt="SimpliChef Logo"
                 className="h-10"
               />
@@ -122,36 +122,40 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Resources</h3>
             <ul className="space-y-2">
               <li>
-                <a
-                  href="#"
-                  className="text-gray-600 hover:text-primary-500 transition-colors"
+                <button
+                  type="button"
+                  className="text-gray-600 hover:text-primary-500 transition-colors text-left w-full"
+                  disabled
                 >
                   Cooking Basics
-                </a>
+                </button>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="text-gray-600 hover:text-primary-500 transition-colors"
+                <button
+                  type="button"
+                  className="text-gray-600 hover:text-primary-500 transition-colors text-left w-full"
+                  disabled
                 >
                   Recipe Ideas
-                </a>
+                </button>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="text-gray-600 hover:text-primary-500 transition-colors"
+                <button
+                  type="button"
+                  className="text-gray-600 hover:text-primary-500 transition-colors text-left w-full"
+                  disabled
                 >
                   Kitchen Tips
-                </a>
+                </button>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="text-gray-600 hover:text-primary-500 transition-colors"
+                <button
+                  type="button"
+                  className="text-gray-600 hover:text-primary-500 transition-colors text-left w-full"
+                  disabled
                 >
                   Meal Planning
-                </a>
+                </button>
               </li>
             </ul>
           </div>
@@ -160,28 +164,31 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Legal</h3>
             <ul className="space-y-2">
               <li>
-                <a
-                  href="#"
-                  className="text-gray-600 hover:text-primary-500 transition-colors"
+                <button
+                  type="button"
+                  className="text-gray-600 hover:text-primary-500 transition-colors text-left w-full"
+                  disabled
                 >
                   Privacy Policy
-                </a>
+                </button>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="text-gray-600 hover:text-primary-500 transition-colors"
+                <button
+                  type="button"
+                  className="text-gray-600 hover:text-primary-500 transition-colors text-left w-full"
+                  disabled
                 >
                   Terms of Service
-                </a>
+                </button>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="text-gray-600 hover:text-primary-500 transition-colors"
+                <button
+                  type="button"
+                  className="text-gray-600 hover:text-primary-500 transition-colors text-left w-full"
+                  disabled
                 >
                   Cookie Policy
-                </a>
+                </button>
               </li>
             </ul>
           </div>
