@@ -1,7 +1,8 @@
 import React from "react";
 import Button from "../ui/Button";
 import AnimatedSection from "../ui/AnimatedSection";
-import heroBg from '../../assets/images/hero-bg.jpg'; // Import the image
+import heroBg from '../../assets/images/hero-bg.png'; // Import the image
+import background from '../../assets/images/background.png'; // Import the image
 
 const Hero = () => {
   return (
@@ -9,8 +10,8 @@ const Hero = () => {
       <div className="relative bg-gradient-to-r from-primary-50 via-white to-secondary-50 pt-20 pb-10 md:pt-32 md:pb-20 overflow-hidden">
         {/* Background Image */}
         <img
-          src={heroBg} // Use imported image
-          alt="Background kitchen scene"
+          src={background} // Use imported image
+          //alt="Background kitchen scene"
           className="absolute inset-0 w-full h-full object-cover opacity-10"
         />
         <div className="relative z-10 flex flex-col md:flex-row items-center">
@@ -35,13 +36,11 @@ const Hero = () => {
           <div className="md:w-1/2 relative">
             <div className="relative z-10 rounded-lg overflow-hidden shadow-xl">
               <img
-                src="/assets/images/hero-bg.jpg"
+                src={heroBg} // Use imported image
                 alt="SimpliChef App"
                 className="w-full h-auto"
               />
             </div>
-            <div className="absolute -bottom-6 -right-6 w-64 h-64 bg-accent-100 rounded-full -z-10"></div>
-            <div className="absolute -top-6 -left-6 w-40 h-40 bg-primary-100 rounded-full -z-10"></div>
           </div>
         </div>
       </div>
