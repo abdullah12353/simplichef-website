@@ -12,7 +12,8 @@ const Mission = () => {
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="h-10 w-10 text-primary-500"
+          // Use accent color
+          className="h-10 w-10 text-mint-green"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -33,7 +34,8 @@ const Mission = () => {
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="h-10 w-10 text-secondary-500"
+          // Use accent color
+          className="h-10 w-10 text-deep-teal"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -54,7 +56,8 @@ const Mission = () => {
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="h-10 w-10 text-accent-500"
+          // Use accent color
+          className="h-10 w-10 text-sunrise-orange"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -75,7 +78,8 @@ const Mission = () => {
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="h-10 w-10 text-green-500"
+          // Use accent color
+          className="h-10 w-10 text-berry-purple" // Changed from green-500
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -92,11 +96,14 @@ const Mission = () => {
   ];
 
   return (
-    <section className="section bg-gray-50">
+    // Use light-gray for this section
+    <section className="section bg-light-gray">
       <Container>
         <div className="text-center mb-16">
-          <h2 className="section-title">Our Mission & Values</h2>
-          <p className="section-subtitle">
+          {/* Apply heading font, weight, and color */}
+          <h2 className="font-heading text-3xl md:text-4xl font-bold text-deep-teal mb-4">Our Mission & Values</h2>
+          {/* Apply body font and color */}
+          <p className="font-body text-lg text-charcoal max-w-3xl mx-auto">
             At SimpliChef, we're on a mission to transform the way people
             approach cooking, making it accessible, enjoyable, and empowering
             for everyone.
@@ -112,10 +119,12 @@ const Mission = () => {
               className="h-full"
             >
               <Card className="h-full p-6 flex items-start" hover={true}>
-                <div className="mr-4 mt-1">{value.icon}</div>
+                <div className="mr-4 mt-1 flex-shrink-0">{value.icon}</div> {/* Added flex-shrink-0 */}
                 <div>
-                  <h3 className="text-xl font-bold mb-2">{value.title}</h3>
-                  <p className="text-gray-600">{value.description}</p>
+                  {/* Apply heading font and color */}
+                  <h3 className="text-xl font-heading font-semibold text-deep-teal mb-2">{value.title}</h3>
+                  {/* Apply body font and color */}
+                  <p className="font-body text-charcoal">{value.description}</p>
                 </div>
               </Card>
             </AnimatedSection>

@@ -9,7 +9,8 @@ const Benefits = () => {
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="h-12 w-12 text-primary-500"
+          // Use accent color
+          className="h-12 w-12 text-mint-green"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -30,7 +31,8 @@ const Benefits = () => {
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="h-12 w-12 text-secondary-500"
+          // Use accent color
+          className="h-12 w-12 text-deep-teal"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -51,7 +53,8 @@ const Benefits = () => {
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="h-12 w-12 text-accent-500"
+          // Use accent color
+          className="h-12 w-12 text-sunrise-orange"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -71,11 +74,14 @@ const Benefits = () => {
   ];
 
   return (
-    <section id="benefits" className="section bg-white">
+    // Use base-white for this section
+    <section id="benefits" className="section bg-base-white">
       <Container>
         <div className="text-center mb-16">
-          <h2 className="section-title">Why Choose SimpliChef?</h2>
-          <p className="section-subtitle">
+          {/* Apply heading font, weight, and color */}
+          <h2 className="font-heading text-3xl md:text-4xl font-bold text-deep-teal mb-4">Why Choose SimpliChef?</h2>
+          {/* Apply body font and color */}
+          <p className="font-body text-lg text-charcoal max-w-2xl mx-auto">
             Our app is designed to transform beginners into confident home cooks
             through a structured, skill-based approach.
           </p>
@@ -95,8 +101,10 @@ const Benefits = () => {
                 padding="lg"
               >
                 <div className="mb-6">{benefit.icon}</div>
-                <h3 className="text-xl font-bold mb-3">{benefit.title}</h3>
-                <p className="text-gray-600">{benefit.description}</p>
+                {/* Apply heading font and color */}
+                <h3 className="text-xl font-heading font-semibold text-deep-teal mb-3">{benefit.title}</h3>
+                {/* Apply body font and color */}
+                <p className="font-body text-charcoal">{benefit.description}</p>
               </Card>
             </AnimatedSection>
           ))}

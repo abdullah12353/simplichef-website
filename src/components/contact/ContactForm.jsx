@@ -26,7 +26,6 @@ const ContactForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Basic validation
     if (!formData.name || !formData.email || !formData.message) {
       setError("Please fill in all required fields");
       return;
@@ -37,14 +36,9 @@ const ContactForm = () => {
       return;
     }
 
-    // In a real app, you would send this data to your backend
     console.log("Submitted:", formData);
-
-    // Show success message
     setSubmitted(true);
     setError("");
-
-    // Reset form
     setFormData({
       name: "",
       email: "",
@@ -54,12 +48,12 @@ const ContactForm = () => {
   };
 
   return (
-    <section className="section bg-white">
+    <section className="section bg-base-white">
       <Container>
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="section-title">Get in Touch</h2>
-            <p className="section-subtitle">
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-deep-teal mb-4">Get in Touch</h2>
+            <p className="font-body text-lg text-charcoal max-w-3xl mx-auto">
               Have questions or feedback about SimpliChef? We'd love to hear
               from you. Fill out the form below and we'll get back to you as
               soon as possible.
@@ -72,12 +66,12 @@ const ContactForm = () => {
               className="md:w-1/3"
             >
               <div className="mb-8">
-                <h3 className="text-xl font-bold mb-4">Contact Information</h3>
-                <div className="space-y-4">
+                <h3 className="font-heading text-xl font-semibold text-deep-teal mb-4">Contact Information</h3>
+                <div className="space-y-4 font-body">
                   <div className="flex items-start">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="h-6 w-6 text-primary-500 mr-3 mt-0.5"
+                      className="h-6 w-6 text-mint-green mr-3 mt-0.5 flex-shrink-0"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -90,10 +84,10 @@ const ContactForm = () => {
                       />
                     </svg>
                     <div>
-                      <div className="font-medium">Email</div>
+                      <div className="font-medium text-charcoal">Email</div>
                       <a
-                        href="mailto:moabdi9367@gmail.com"
-                        className="text-primary-500 hover:underline"
+                        href="mailto:hello@simplichef.com"
+                        className="font-heading font-medium text-mint-green hover:text-deep-teal underline"
                       >
                         hello@simplichef.com
                       </a>
@@ -102,7 +96,7 @@ const ContactForm = () => {
                   <div className="flex items-start">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="h-6 w-6 text-primary-500 mr-3 mt-0.5"
+                      className="h-6 w-6 text-mint-green mr-3 mt-0.5 flex-shrink-0"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -121,8 +115,8 @@ const ContactForm = () => {
                       />
                     </svg>
                     <div>
-                      <div className="font-medium">Location</div>
-                      <div className="text-gray-600">
+                      <div className="font-medium text-charcoal">Location</div>
+                      <div className="text-charcoal">
                         Coventry, United Kingdom
                       </div>
                     </div>
@@ -131,13 +125,13 @@ const ContactForm = () => {
               </div>
 
               <div>
-                <h3 className="text-xl font-bold mb-4">Follow Us</h3>
+                <h3 className="font-heading text-xl font-semibold text-deep-teal mb-4">Follow Us</h3>
                 <div className="flex space-x-4">
                   <a
                     href="https://twitter.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-gray-100 hover:bg-primary-100 text-gray-600 hover:text-primary-500 p-3 rounded-full transition-colors"
+                    className="bg-light-gray hover:bg-mint-green/20 text-charcoal hover:text-deep-teal p-3 rounded-full transition-colors"
                   >
                     <svg
                       className="h-5 w-5"
@@ -152,7 +146,7 @@ const ContactForm = () => {
                     href="https://instagram.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-gray-100 hover:bg-primary-100 text-gray-600 hover:text-primary-500 p-3 rounded-full transition-colors"
+                    className="bg-light-gray hover:bg-mint-green/20 text-charcoal hover:text-deep-teal p-3 rounded-full transition-colors"
                   >
                     <svg
                       className="h-5 w-5"
@@ -171,7 +165,7 @@ const ContactForm = () => {
                     href="https://facebook.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-gray-100 hover:bg-primary-100 text-gray-600 hover:text-primary-500 p-3 rounded-full transition-colors"
+                    className="bg-light-gray hover:bg-mint-green/20 text-charcoal hover:text-deep-teal p-3 rounded-full transition-colors"
                   >
                     <svg
                       className="h-5 w-5"
@@ -196,7 +190,7 @@ const ContactForm = () => {
                   <div className="text-center py-12 px-6">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="h-16 w-16 text-primary-500 mx-auto mb-4"
+                      className="h-16 w-16 text-success-green mx-auto mb-4"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -208,16 +202,16 @@ const ContactForm = () => {
                         d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                       />
                     </svg>
-                    <h3 className="text-2xl font-bold mb-2">
+                    <h3 className="text-2xl font-heading font-bold text-deep-teal mb-2">
                       Message Sent Successfully!
                     </h3>
-                    <p className="text-gray-600 mb-6">
+                    <p className="font-body text-charcoal mb-6">
                       Thank you for reaching out. We'll get back to you as soon
                       as possible.
                     </p>
                     <Button
                       onClick={() => setSubmitted(false)}
-                      variant="outline"
+                      variant="secondary"
                     >
                       Send Another Message
                     </Button>
@@ -225,7 +219,7 @@ const ContactForm = () => {
                 ) : (
                   <form onSubmit={handleSubmit} className="p-6">
                     {error && (
-                      <div className="mb-4 p-3 bg-red-50 text-red-500 rounded-md">
+                      <div className="mb-4 p-3 bg-alert-red/10 text-alert-red rounded-md font-body">
                         {error}
                       </div>
                     )}
@@ -260,9 +254,9 @@ const ContactForm = () => {
                     <div className="mb-4">
                       <label
                         htmlFor="message"
-                        className="block text-sm font-medium text-gray-700 mb-1"
+                        className="block text-sm font-heading font-semibold text-charcoal mb-1"
                       >
-                        Message<span className="text-red-500 ml-1">*</span>
+                        Message<span className="text-alert-red ml-1">*</span>
                       </label>
                       <textarea
                         id="message"
@@ -272,11 +266,14 @@ const ContactForm = () => {
                         onChange={handleChange}
                         placeholder="Your message here..."
                         required
-                        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                        className="w-full px-4 py-2 border rounded-lg font-body 
+                                   bg-base-white text-charcoal placeholder-fog-gray 
+                                   focus:border-mint-green focus:ring-1 focus:ring-mint-green 
+                                   border-fog-gray"
                       ></textarea>
                     </div>
                     <div className="mt-6">
-                      <Button type="submit" className="w-full" size="lg">
+                      <Button type="submit" className="w-full" size="lg" variant="primary">
                         Send Message
                       </Button>
                     </div>

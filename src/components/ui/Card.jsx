@@ -6,7 +6,7 @@ const Card = ({
   hover = false,
   shadow = "md",
   padding = "md",
-  rounded = "md",
+  rounded = "xl",
 }) => {
   const shadowClasses = {
     none: "",
@@ -39,7 +39,7 @@ const Card = ({
 
   return (
     <div
-      className={`bg-white ${shadowClasses[shadow]} ${paddingClasses[padding]} ${roundedClasses[rounded]} ${hoverClasses} ${className}`}
+      className={`bg-base-white ${shadowClasses[shadow]} ${paddingClasses[padding]} ${roundedClasses[rounded]} ${hoverClasses} ${className}`}
     >
       {children}
     </div>

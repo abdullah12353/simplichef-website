@@ -21,17 +21,15 @@ const BlogPostPage = () => {
     if (foundPost) {
       setPost(foundPost);
     } else {
-      // Handle post not found (optional: redirect to a 404 page)
       console.error("Post not found for slug:", slug);
-      // Optionally navigate to a 404 page or back to the blog index
-      // navigate('/404'); or navigate('/blog');
     }
     setLoading(false);
   }, [slug, navigate]); // Rerun effect if slug changes
 
   if (loading) {
     return (
-      <div className="pt-32 pb-16 text-center">
+      // Apply page background
+      <div className="pt-32 pb-16 text-center bg-base-white font-body"> {/* Added font-body */}
         <Container>Loading post...</Container>
       </div>
     );
@@ -39,15 +37,19 @@ const BlogPostPage = () => {
 
   if (!post) {
     return (
-      <div className="pt-32 pb-16 text-center">
+      // Apply page background
+      <div className="pt-32 pb-16 text-center bg-base-white">
         <Container>
-          <h1 className="text-3xl font-bold mb-4">Post Not Found</h1>
-          <p className="mb-6">
+          {/* Apply heading font and color */}
+          <h1 className="text-3xl font-heading font-bold text-deep-teal mb-4">Post Not Found</h1>
+          {/* Apply body font and color */}
+          <p className="font-body text-charcoal mb-6"> {/* Added font-body */}
             Sorry, we couldn't find the post you were looking for.
           </p>
+          {/* Apply link font and color */}
           <Link
             to="/blog"
-            className="text-primary-500 hover:text-primary-600 font-medium"
+            className="font-heading font-medium text-mint-green hover:text-deep-teal" /* Changed to font-heading font-medium */
           >
             &larr; Back to Blog
           </Link>
@@ -64,15 +66,17 @@ const BlogPostPage = () => {
   });
 
   return (
-    <div className="pt-32 pb-16">
+    // Apply page background
+    <div className="pt-32 pb-16 bg-base-white">
       <Container className="max-w-4xl mx-auto">
         <article>
           {/* Post Header */}
-          <header className="mb-8 border-b pb-6">
+          <header className="mb-8 border-b border-light-gray pb-6"> {/* Use light-gray for border */}
             <div className="mb-4">
+              {/* Apply link font and color */}
               <Link
                 to="/blog"
-                className="text-sm text-primary-500 hover:text-primary-600 font-medium inline-flex items-center"
+                className="text-sm font-heading font-medium text-mint-green hover:text-deep-teal inline-flex items-center" /* Changed to font-heading font-medium */
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -91,10 +95,12 @@ const BlogPostPage = () => {
                 Back to Blog
               </Link>
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-3 leading-tight">
+            {/* Apply heading font and color */}
+            <h1 className="text-4xl md:text-5xl font-heading font-bold text-deep-teal mb-3 leading-tight">
               {post.title}
             </h1>
-            <div className="text-gray-500 text-sm">
+            {/* Apply metadata font and color */}
+            <div className="font-body text-fog-gray text-sm">
               <span>Published on {formattedDate}</span>
               <span className="mx-2">&bull;</span>
               <span>Category: {post.category}</span>
@@ -112,9 +118,8 @@ const BlogPostPage = () => {
             </div>
           )}
 
-          {/* Post Content - Rendered using ReactMarkdown */}
-          {/* Add the 'prose' classes for Tailwind Typography styling */}
-          <div className="prose prose-lg max-w-none prose-indigo prose-a:text-primary-500 hover:prose-a:text-primary-600">
+          {/* Post Content - Apply prose styles via tailwind.config.js */}
+          <div className="prose prose-lg max-w-none">
             <ReactMarkdown>{post.content}</ReactMarkdown>
           </div>
         </article>

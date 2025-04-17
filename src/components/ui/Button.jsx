@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Button = ({
   children,
-  variant = "primary",
+  variant = "primary", // Default to primary
   size = "md",
   href,
   className = "",
@@ -13,19 +13,18 @@ const Button = ({
   ...props
 }) => {
   const baseClasses =
-    "inline-flex items-center justify-center rounded-md font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2";
+    "inline-flex items-center justify-center rounded-lg font-heading font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2"; // Added font-heading
 
+  // Updated variants based on Brand Guidelines
   const variantClasses = {
     primary:
-      "bg-primary-500 text-white hover:bg-primary-600 focus:ring-primary-500",
-    secondary:
-      "bg-secondary-500 text-white hover:bg-secondary-600 focus:ring-secondary-500",
+      "bg-mint-green text-white font-semibold hover:bg-[#2BC4A2] focus:ring-mint-green", // Removed font-heading (now in base)
+    secondary: // Outline
+      "border border-deep-teal text-deep-teal font-semibold hover:bg-deep-teal/10 focus:ring-deep-teal", // Removed font-heading (now in base)
     accent:
-      "bg-accent-500 text-white hover:bg-accent-600 focus:ring-accent-500",
-    outline:
-      "bg-transparent border border-primary-500 text-primary-500 hover:bg-primary-50 focus:ring-primary-500",
-    ghost:
-      "bg-transparent text-primary-500 hover:bg-primary-50 focus:ring-primary-500",
+      "bg-sunrise-orange text-white font-semibold hover:opacity-90 focus:ring-sunrise-orange", // Removed font-heading (now in base)
+    tertiary: // Text/Ghost
+      "text-deep-teal font-medium hover:text-mint-green focus:ring-mint-green", // Removed font-heading (now in base)
   };
 
   const sizeClasses = {
@@ -34,11 +33,13 @@ const Button = ({
     lg: "text-lg px-6 py-3",
   };
 
+  // Updated disabled state
   const disabledClasses = disabled
-    ? "opacity-50 cursor-not-allowed"
-    : "cursor-pointer";
+    ? "bg-fog-gray text-white opacity-70 cursor-not-allowed"
+    : ""; // Removed cursor-pointer, handled by non-disabled state
 
-  const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${disabledClasses} ${className}`;
+  // Combine classes, ensuring disabled overrides variant styles if needed
+  const classes = `${baseClasses} ${!disabled ? variantClasses[variant] : ''} ${sizeClasses[size]} ${disabled ? disabledClasses : 'cursor-pointer'} ${className}`;
 
   if (href) {
     // If href starts with http or https, use a regular anchor tag

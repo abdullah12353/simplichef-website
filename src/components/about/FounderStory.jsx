@@ -4,16 +4,20 @@ import founderImg from '../../assets/images/founder.png'; // Import the image
 
 const FounderStory = () => {
   return (
-    <section className="section bg-white">
-      <div className="flex flex-col md:flex-row items-center gap-12">
+    // Use base-white for this section
+    <section className="section bg-base-white">
+      {/* Use Container for consistent padding */}
+      <div className="container-custom flex flex-col md:flex-row items-center gap-12">
         <AnimatedSection
           animation="slide-in-right"
           className="md:w-1/2 order-2 md:order-1"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          {/* Apply heading font and color */}
+          <h2 className="font-heading text-3xl md:text-4xl font-bold text-deep-teal mb-6">
             Our Founder's Story
           </h2>
-          <div className="prose prose-lg max-w-none">
+          {/* Apply body font and color to prose text */}
+          <div className="prose prose-lg max-w-none font-body text-charcoal">
             <p className="mb-4">
               Hi, I'm Mohammed Abdullah — I created SimpliChef out of personal
               frustration seeing fellow students constantly relying on
