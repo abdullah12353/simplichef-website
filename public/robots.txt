@@ -1,3 +1,6 @@
-# https://www.robotstxt.org/robotstxt.html
+# Allow all major crawlers access to the entire site
 User-agent: *
-Disallow:
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.simplichef.com/sitemap.xml

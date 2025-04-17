@@ -7,10 +7,10 @@ const tallyWaitlistUrl = "https://tally.so/r/wdRVgo?tally-source=hero"; // Sourc
 
 const Hero = () => {
   return (
-    <div className="relative bg-base-white pt-20 pb-10 md:pt-32 md:pb-20 overflow-hidden">
+    <section className="relative bg-base-white pt-20 pb-10 md:pt-32 md:pb-20 overflow-hidden">
       {/* Brand color gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-mint-green/10 via-base-white to-deep-teal/10"></div>
-      
+
       <Container className="relative z-10 text-center">
         <AnimatedSection animationType="fadeUp" duration={600} delay={100}>
           {/* Apply heading font and color */}
@@ -20,7 +20,7 @@ const Hero = () => {
             <span className="text-mint-green">Eat Better</span>
           </h1>
         </AnimatedSection>
-        
+
         <AnimatedSection animationType="fadeUp" duration={600} delay={300}>
           {/* Apply body font and color */}
           <p className="text-xl font-body text-charcoal mb-8 max-w-lg mx-auto">
@@ -28,7 +28,7 @@ const Hero = () => {
             confidence in the kitchen—one meal at a time.
           </p>
         </AnimatedSection>
-        
+
         <AnimatedSection animationType="fadeUp" duration={600} delay={500}>
           <div className="mt-8 flex justify-center">
             <Button
@@ -43,7 +43,7 @@ const Hero = () => {
           </div>
         </AnimatedSection>
       </Container>
-    </div>
+    </section>
   );
 };
 

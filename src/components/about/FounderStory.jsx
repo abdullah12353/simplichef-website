@@ -39,7 +39,7 @@ const FounderStory = () => {
         >
           <img
             src={founderImg} // Use imported image
-            alt="Founder Name"
+            alt="Mohammed Abdullah, Founder of SimpliChef" // Good descriptive alt text
             className="rounded-lg shadow-lg max-w-xs md:max-w-sm w-full" // Added w-full for better scaling within flex container
           />
         </AnimatedSection>

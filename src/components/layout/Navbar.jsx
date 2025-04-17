@@ -34,7 +34,7 @@ const Navbar = () => {
       <Container>
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center">
-            <img src={logo} alt="Logo" className="h-10 md:h-12" />
+            <img src={logo} alt="SimpliChef Logo" className="h-10 md:h-12" />
             <span className="ml-2 text-xl font-heading font-bold text-deep-teal">
               SimpliChef
             </span>
